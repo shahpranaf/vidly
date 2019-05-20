@@ -1,20 +1,27 @@
 import React from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import "./App.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Movies from "./components/movies";
 import NavBar from "./components/navBar";
 import Customer from "./components/customer";
 import Rental from "./components/rental";
 import NotFound from "./components/notFound";
 import MovieForm from "./components/movieForm";
+import LoginForm from "./components/loginForm";
+import RegisterForm from "./components/registerForm";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-
+      <ToastContainer />
       <main className="container">
         <Switch>
+          <Route path="/login" component={LoginForm} />
+          <Route path="/register" component={RegisterForm} />
           <Route path="/movies/:id" component={MovieForm} />
           <Route path="/movies" component={Movies} />
           <Route path="/customer" component={Customer} />
