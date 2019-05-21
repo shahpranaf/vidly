@@ -1,15 +1,11 @@
-// import Raven from "raven-js";
+// For simplicity, I changed the implementation of this module
+// and removed Raven. We can always add that in the future
+// and this module is the only module we need to modify.
 
-function init() {
-  // Raven.config("ADD YOUR OWN API KEY", {
-  //   release: "1-0-0",
-  //   environment: "development-test"
-  // }).install();
-}
+function init() {}
 
 function log(error) {
   console.error(error);
-  // Raven.captureException(error);
 }
 
 export default {

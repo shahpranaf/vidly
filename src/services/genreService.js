@@ -1,10 +1,6 @@
-import http from "./httpsService";
-import config from "../config.json";
-export const genres = [];
-const url = config.apiUrl + "/genres";
+import http from "./httpService";
+import { apiUrl } from "../config.json";
 
 export function getGenres() {
-  return http.get(url);
-
-  //   return response.data;
+  return http.get(apiUrl + "/genres");
 }
